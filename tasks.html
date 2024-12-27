@@ -14,9 +14,21 @@
 
         .header {
             background-color: #ffdd4b;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             border-bottom: 2px solid #ffbf00;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
         }
 
         .container {
@@ -29,53 +41,58 @@
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .status {
             display: flex;
             justify-content: space-between;
+        }
+
+        .task-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .task-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
-        .status .tab {
-            flex: 1;
-            padding: 10px;
-            margin: 0 5px;
-            background-color: #ffdd4b;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .status .tab.active {
-            background-color: #ffa500;
-            color: white;
-        }
-
-        .task {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .reward-img {
-            width: 80px;
-            height: 80px;
+        .task-card img {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-right: 15px;
         }
 
-        #completeBtn {
-            padding: 10px 20px;
+        .task-details {
+            flex-grow: 1;
+        }
+
+        .task-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .task-details p strong {
+            color: #333;
+        }
+
+        .task-actions {
+            text-align: right;
+        }
+
+        .task-actions button {
+            padding: 8px 15px;
             background-color: #ff4b4b;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 12px;
         }
 
         .navbar {
@@ -107,7 +124,7 @@
 <body>
     <div class="header">
         <h1>Shell Usdt Trx</h1>
-        <p>Restablecer tarea: <span id="countdown">18:48:50</span></p>
+        <p>Restablecer tarea en: <span id="countdown">24:00:00</span></p>
     </div>
 
     <div class="container">
@@ -116,16 +133,15 @@
             <p><strong>Las tareas pendientes de hoy:</strong> 0</p>
         </div>
 
-        <div class="status">
-            <button class="tab active">En curso</button>
-            <button class="tab">Terminado</button>
-        </div>
-
-        <div class="task">
-            <img src="https://github.com/user-attachments/assets/22782c5b-8c63-4c78-856e-4407a3b031bc" alt="Bonificación" class="reward-img">
-            <p><strong>Bonificación:</strong> 15 USDT</p>
-            <p><strong>Ganancia:</strong> 35 USDT</p>
-            <button id="completeBtn">Completar</button>
+        <div class="task-card">
+            <img src="https://via.placeholder.com/60" alt="Bonificación">
+            <div class="task-details">
+                <p><strong>Bonificación:</strong> 15 USDT</p>
+                <p><strong>Ganancia:</strong> 35 USDT</p>
+            </div>
+            <div class="task-actions">
+                <button id="completeBtn">Completar</button>
+            </div>
         </div>
     </div>
 
@@ -153,9 +169,44 @@
     </div>
 
     <script>
+        // Configuración del cronómetro
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let hours = 24;
+            let minutes = 0;
+            let seconds = 0;
+
+            const interval = setInterval(() => {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        if (hours === 0) {
+                            clearInterval(interval);
+                            countdownElement.textContent = "00:00:00";
+                            return;
+                        }
+                        hours--;
+                        minutes = 59;
+                    }
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+
+                const h = hours.toString().padStart(2, '0');
+                const m = minutes.toString().padStart(2, '0');
+                const s = seconds.toString().padStart(2, '0');
+
+                countdownElement.textContent = `${h}:${m}:${s}`;
+            }, 1000);
+        }
+
         document.getElementById('completeBtn').addEventListener('click', function () {
             alert('Debes comprar su VIP para hacer la tarea');
         });
+
+        // Iniciar el cronómetro al cargar la página
+        startCountdown();
     </script>
 </body>
-  </html>
+</html>
