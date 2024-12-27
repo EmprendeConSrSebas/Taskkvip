@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #c80000;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .icon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .icon-item {
+      text-align: center;
+      width: 80px;
+    }
+    .icon-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+    }
+    .icon-item span {
+      font-size: 0.9em;
+      color: #333;
+    }
+    .navbar {
+      background-color: #c80000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .navbar a:hover {
+      background-color: #ff4500;
+    }
+    .spacer {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hogar</h1>
+  </header>
 
+  <div class="icon-grid">
+    <div class="icon-item">
+      <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+      <span>Hogar</span>
+    </div>
+    <div class="icon-item">
+      <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tareas">
+      <span>Tareas</span>
+    </div>
+    <div class="icon-item">
+      <img src="https://img.icons8.com/ios-filled/50/team.png" alt="Equipo">
+      <span>Equipo</span>
+    </div>
+    <div class="icon-item">
+      <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+      <span>VIP</span>
+    </div>
+    <div class="icon-item">
+      <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+      <span>Perfil</span>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="navbar">
+    <a href="home.html">Hogar</a>
+    <a href="tasks.html">Tarea</a>
+    <a href="team.html">Equipo</a>
+    <a href="vip.html">VIP</a>
+    <a href="profile.html">A mí</a>
+  </div>
+</body>
+</html>
