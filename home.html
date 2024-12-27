@@ -3,47 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Shell Usdt Trx</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+      overflow-x: hidden;
     }
+
     header {
       background-color: #c80000;
       color: white;
-      padding: 10px;
-      text-align: center;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.5em;
+
+    header .left-icons img,
+    header .right-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+      cursor: pointer;
     }
-    .icon-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+
+    header h1 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .carousel {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      animation: fade 20s infinite;
+    }
+
+    @keyframes fade {
+      0% { opacity: 1; }
+      20% { opacity: 0; }
+      40% { opacity: 1; }
+    }
+
+    .bonus-section {
+      background: #ffedd5;
+      color: #c80000;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      animation: popIn 1.5s ease-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .content {
       padding: 20px;
     }
-    .icon-item {
+
+    .vip-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .vip-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
       text-align: center;
-      width: 80px;
+      flex: 1 1 calc(33.333% - 20px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: floatIn 1.5s ease-out;
     }
-    .icon-item img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 5px;
+
+    .vip-card h3 {
+      font-size: 1em;
+      margin: 10px 0;
     }
-    .icon-item span {
-      font-size: 0.9em;
-      color: #333;
+
+    .vip-card button {
+      background: #ff4500;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
     }
+
+    .vip-card button:hover {
+      background: #c80000;
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
     .navbar {
       background-color: #c80000;
       position: fixed;
@@ -52,58 +130,111 @@
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
+      align-items: center;
     }
+
     .navbar a {
       text-decoration: none;
       color: white;
-      font-size: 1em;
-      padding: 5px 10px;
-      border-radius: 5px;
+      font-size: 0.8em;
+      text-align: center;
     }
-    .navbar a:hover {
-      background-color: #ff4500;
-    }
-    .spacer {
-      height: 100px;
+
+    .navbar img {
+      width: 25px;
+      height: 25px;
+      display: block;
+      margin: 0 auto 5px;
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Hogar</h1>
+    <div class="left-icons">
+      <img src="https://img.icons8.com/ios-filled/50/menu.png" alt="Menú" onclick="navigate('menu.html')">
+    </div>
+    <h1>Shell Usdt Trx</h1>
+    <div class="right-icons">
+      <img src="https://img.icons8.com/ios-filled/50/notification.png" alt="Notificaciones" onclick="navigate('notifications.html')">
+      <img src="https://img.icons8.com/ios-filled/50/settings.png" alt="Ajustes" onclick="navigate('settings.html')">
+    </div>
   </header>
 
-  <div class="icon-grid">
-    <div class="icon-item">
-      <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
-      <span>Hogar</span>
-    </div>
-    <div class="icon-item">
-      <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tareas">
-      <span>Tareas</span>
-    </div>
-    <div class="icon-item">
-      <img src="https://img.icons8.com/ios-filled/50/team.png" alt="Equipo">
-      <span>Equipo</span>
-    </div>
-    <div class="icon-item">
-      <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
-      <span>VIP</span>
-    </div>
-    <div class="icon-item">
-      <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
-      <span>Perfil</span>
-    </div>
+  <!-- Carousel -->
+  <div class="carousel">
+    <img src="https://via.placeholder.com/800x200/FF4500/FFFFFF?text=Imagen+1" alt="Imagen 1">
+    <img src="https://via.placeholder.com/800x200/FF6347/FFFFFF?text=Imagen+2" alt="Imagen 2">
+    <img src="https://via.placeholder.com/800x200/FF7F50/FFFFFF?text=Imagen+3" alt="Imagen 3">
+    <img src="https://via.placeholder.com/800x200/FFA07A/FFFFFF?text=Imagen+4" alt="Imagen 4">
+    <img src="https://via.placeholder.com/800x200/FF4500/FFFFFF?text=Imagen+5" alt="Imagen 5">
   </div>
 
-  <div class="spacer"></div>
+  <!-- Bonus Section -->
+  <div class="bonus-section">
+    ¡Invita a tus amigos y gana bonificaciones exclusivas!
+  </div>
 
+  <!-- Content -->
+  <div class="content">
+    <section class="vip-section">
+      <!-- VIP Cards -->
+      <div class="vip-card">
+        <h3>VIP1</h3>
+        <p>Comisión: $1.50</p>
+        <button onclick="navigate('vip1.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <h3>VIP2</h3>
+        <p>Comisión: $7.50</p>
+        <button onclick="navigate('vip2.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <h3>VIP3</h3>
+        <p>Comisión: $15.00</p>
+        <button onclick="navigate('vip3.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <h3>VIP4</h3>
+        <p>Comisión: $30.00</p>
+        <button onclick="navigate('vip4.html')">Ir</button>
+      </div>
+      <div class="vip-card">
+        <h3>VIP5</h3>
+        <p>Comisión: $50.00</p>
+        <button onclick="navigate('vip5.html')">Ir</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Navbar -->
   <div class="navbar">
-    <a href="home.html">Hogar</a>
-    <a href="tasks.html">Tarea</a>
-    <a href="team.html">Equipo</a>
-    <a href="vip.html">VIP</a>
-    <a href="profile.html">A mí</a>
+    <a href="home.html">
+      <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+      Hogar
+    </a>
+    <a href="tasks.html">
+      <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+      Tarea
+    </a>
+    <a href="team.html">
+      <img src="https://img.icons8.com/ios-filled/50/team.png" alt="Equipo">
+      Equipo
+    </a>
+    <a href="vip.html">
+      <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+      VIP
+    </a>
+    <a href="profile.html">
+      <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+      Perfil
+    </a>
   </div>
+
+  <script>
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
