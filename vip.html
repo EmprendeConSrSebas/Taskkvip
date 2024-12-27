@@ -77,19 +77,28 @@
             background-color: #ff0000;
             display: flex;
             justify-content: space-around;
-            padding: 10px 0;
+            padding: 5px 0;
+            border-top: 2px solid #e5e5e5;
         }
 
         .navbar a {
             text-align: center;
             color: white;
             text-decoration: none;
+            font-size: 12px;
         }
 
         .navbar img {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 5px;
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: 0 auto 2px;
+        }
+
+        .navbar a span {
+            display: block;
+            font-size: 10px;
+            margin-top: 2px;
         }
     </style>
 </head>
@@ -123,60 +132,27 @@
         </div>
     </div>
 
-    <div class="vip-section">
-        <h2>VIP3</h2>
-        <div class="vip-details">
-            <p>Tareas diarias: <span>1</span></p>
-            <p>Interés simple: <span>12.50 USDT</span></p>
-            <p>Ganancia diaria: <span>12.50 USDT</span></p>
-            <p>El beneficio total: <span>600.00 USDT</span></p>
-            <a href="vip3-details.html" class="unlock">45.00 USDT - Desbloquear ahora</a>
-        </div>
-    </div>
-
-    <div class="vip-section">
-        <h2>VIP4</h2>
-        <div class="vip-details">
-            <p>Tareas diarias: <span>1</span></p>
-            <p>Interés simple: <span>20.00 USDT</span></p>
-            <p>Ganancia diaria: <span>20.00 USDT</span></p>
-            <p>El beneficio total: <span>900.00 USDT</span></p>
-            <a href="vip4-details.html" class="unlock">70.00 USDT - Desbloquear ahora</a>
-        </div>
-    </div>
-
-    <div class="vip-section">
-        <h2>VIP5</h2>
-        <div class="vip-details">
-            <p>Tareas diarias: <span>1</span></p>
-            <p>Interés simple: <span>35.00 USDT</span></p>
-            <p>Ganancia diaria: <span>35.00 USDT</span></p>
-            <p>El beneficio total: <span>1200.00 USDT</span></p>
-            <a href="vip5-details.html" class="unlock">90.00 USDT - Desbloquear ahora</a>
-        </div>
-    </div>
-
     <!-- Navbar -->
     <div class="navbar">
         <a href="home.html">
             <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
-            Hogar
+            <span>Hogar</span>
         </a>
         <a href="tasks.html">
             <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
-            Tarea
+            <span>Tarea</span>
         </a>
         <a href="team.html">
-            <img src="https://github.com/user-attachments/assets/d9546e0d-3b48-4ddf-9384-ca6600137f29" alt="Equipo">
-            Equipo
+            <img src="https://img.icons8.com/ios-filled/50/group.png" alt="Equipo">
+            <span>Equipo</span>
         </a>
         <a href="vip.html">
             <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
-            VIP
+            <span>VIP</span>
         </a>
         <a href="profile.html">
             <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
-            Perfil
+            <span>Perfil</span>
         </a>
     </div>
 
