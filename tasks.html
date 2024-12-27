@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Usdt Trx</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #ffdd4b;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffbf00;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .task-info {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .status {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .status .tab {
+            flex: 1;
+            padding: 10px;
+            margin: 0 5px;
+            background-color: #ffdd4b;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .status .tab.active {
+            background-color: #ffa500;
+            color: white;
+        }
+
+        .task {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reward-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        #completeBtn {
+            padding: 10px 20px;
+            background-color: #ff4b4b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ff4b4b;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 2px solid #ffbf00;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .navbar img {
+            display: block;
+            margin: 0 auto;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Shell Usdt Trx</h1>
+        <p>Restablecer tarea: <span id="countdown">18:48:50</span></p>
+    </div>
+
+    <div class="container">
+        <div class="task-info">
+            <p><strong>Todas las tareas para hoy:</strong> 0</p>
+            <p><strong>Las tareas pendientes de hoy:</strong> 0</p>
+        </div>
+
+        <div class="status">
+            <button class="tab active">En curso</button>
+            <button class="tab">Terminado</button>
+        </div>
+
+        <div class="task">
+            <img src="https://via.placeholder.com/100" alt="Bonificación" class="reward-img">
+            <p><strong>Bonificación:</strong> 15 USDT</p>
+            <p><strong>Ganancia:</strong> 35 USDT</p>
+            <button id="completeBtn">Completar</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="home.html">
+            <img src="https://img.icons8.com/ios-filled/50/home.png" alt="Hogar">
+            Hogar
+        </a>
+        <a href="tasks.html">
+            <img src="https://img.icons8.com/ios-filled/50/task.png" alt="Tarea">
+            Tarea
+        </a>
+        <a href="team.html">
+            <img src="https://img.icons8.com/ios-filled/50/group.png" alt="Equipo">
+            Equipo
+        </a>
+        <a href="vip.html">
+            <img src="https://img.icons8.com/ios-filled/50/vip.png" alt="VIP">
+            VIP
+        </a>
+        <a href="profile.html">
+            <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Perfil">
+            Perfil
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('completeBtn').addEventListener('click', function () {
+            alert('Debes comprar su VIP para hacer la tarea');
+        });
+    </script>
+</body>
+  </html>
