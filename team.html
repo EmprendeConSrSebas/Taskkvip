@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden;
         }
 
         /* Estilo del encabezado */
@@ -18,11 +19,18 @@
             padding: 10px;
             text-align: center;
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header h1 {
             margin: 0;
             font-size: 22px;
+        }
+
+        .spacer {
+            height: 20px; /* Espaciador */
         }
 
         .invitation {
@@ -98,6 +106,31 @@
             cursor: pointer;
         }
 
+        .scoreboard {
+            margin: 20px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scoreboard h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .scoreboard ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .scoreboard li {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #ffe5e5;
+            border-radius: 5px;
+        }
+
         .navbar {
             position: fixed;
             bottom: 0;
@@ -121,12 +154,19 @@
             height: 24px;
             margin-bottom: 5px;
         }
+
+        /* Espacio para evitar superposición con la barra */
+        .content-spacer {
+            padding-bottom: 70px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Shell Usdt Trx</h1>
     </div>
+
+    <div class="spacer"></div>
 
     <div class="invitation">
         <p>Código de invitación: <strong>287990</strong></p>
@@ -152,35 +192,18 @@
                 <p>$0.00</p>
             </div>
         </div>
-        <div class="stats">
-            <div>
-                <p><strong>Nuevo equipo</strong></p>
-                <p>0</p>
-            </div>
-            <div>
-                <p><strong>Recarga por primera vez</strong></p>
-                <p>0</p>
-            </div>
-            <div>
-                <p><strong>Primer retiro</strong></p>
-                <p>0</p>
-            </div>
-        </div>
-
-        <div class="level-card">
-            <h3>LEV 1</h3>
-            <p>Registro/Válido: <strong>5/0</strong></p>
-            <p>Porcentaje de comisión: <strong>12%</strong></p>
-            <button class="details">Detalles</button>
-        </div>
-
-        <div class="level-card">
-            <h3>LEV 2</h3>
-            <p>Registro/Válido: <strong>1/0</strong></p>
-            <p>Porcentaje de comisión: <strong>3%</strong></p>
-            <button class="details">Detalles</button>
-        </div>
     </div>
+
+    <div class="scoreboard">
+        <h3>Scoreboard</h3>
+        <ul>
+            <li>Jugador 1: 150 puntos</li>
+            <li>Jugador 2: 120 puntos</li>
+            <li>Jugador 3: 110 puntos</li>
+        </ul>
+    </div>
+
+    <div class="content-spacer"></div>
 
     <div class="navbar">
         <a href="home.html">
@@ -214,4 +237,4 @@
         });
     </script>
 </body>
-          </html>
+</html>
