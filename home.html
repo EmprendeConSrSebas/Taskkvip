@@ -123,8 +123,8 @@
       height: 40px;
       border-radius: 50%;
       position: absolute;
-      bottom: 10px;
-      right: 10px;
+      top: 10px;
+      left: 10px;
       border: 2px solid #c80000;
     }
 
@@ -133,14 +133,27 @@
       100% { transform: translateY(0); opacity: 1; }
     }
 
-    .scoreboard {
-      background-color: #fff;
+    /* Animación de retiros */
+    .withdrawal-section {
+      background-color: #f0f0f0;
       padding: 15px;
+      text-align: center;
       margin-top: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
       font-weight: bold;
+      animation: slideIn 10s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2em;
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(50px); }
+      20% { opacity: 1; transform: translateX(0); }
+      60% { opacity: 1; transform: translateX(0); }
+      80% { opacity: 0; transform: translateX(-50px); }
     }
 
     .navbar {
@@ -201,48 +214,67 @@
     <section class="vip-section">
       <!-- VIP Cards -->
       <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
         <h3>VIP1</h3>
-        <p>Comisión: $1.50</p>
+        <p>Comisión: $15</p>
         <button onclick="navigate('vip1.html')">Ir</button>
-        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
         <h3>VIP2</h3>
-        <p>Comisión: $7.50</p>
+        <p>Comisión: $35</p>
         <button onclick="navigate('vip2.html')">Ir</button>
-        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
         <h3>VIP3</h3>
-        <p>Comisión: $15.00</p>
+        <p>Comisión: $45</p>
         <button onclick="navigate('vip3.html')">Ir</button>
-        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
         <h3>VIP4</h3>
-        <p>Comisión: $30.00</p>
+        <p>Comisión: $55</p>
         <button onclick="navigate('vip4.html')">Ir</button>
-        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
         <h3>VIP5</h3>
-        <p>Comisión: $50.00</p>
+        <p>Comisión: $65</p>
         <button onclick="navigate('vip5.html')">Ir</button>
-        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
-        <h3>VIP6</h3>
-        <p>Comisión: $75.00</p>
-        <button onclick="navigate('vip6.html')">Ir</button>
         <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+        <h3>VIP6</h3>
+        <p>Comisión: $75</p>
+        <button onclick="navigate('vip6.html')">Ir</button>
       </div>
     </section>
 
-    <!-- Scoreboard -->
-    <div class="scoreboard">
-      <p>Puntajes y logros del usuario</p>
-      <p><strong>Comisiones Totales: $XXX</strong></p>
+    <!-- Retiros Section -->
+    <div class="withdrawal-section">
+      <div>
+        <p>TNU con retiro de 55 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>VA con retiro de 55 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>US con retiro de 55 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>TG con retiro de 55 USDT ⭐️</p>
+      </div>
+      <div>
+        <p>DH con retiro de 55 USDT ⭐️</p>
+      </div>
     </div>
+  </div>
+
+  <!-- Scoreboard -->
+  <div class="scoreboard">
+    <p>Puntajes y logros del usuario</p>
+    <p><strong>Comisiones Totales: $XXX</strong></p>
   </div>
 
   <!-- Navbar -->
