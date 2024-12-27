@@ -93,9 +93,10 @@
       border-radius: 8px;
       padding: 10px;
       text-align: center;
-      flex: 1 1 calc(33.333% - 20px);
+      flex: 1 1 calc(20% - 20px); /* Ajuste para 5 tarjetas en lugar de 3 */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       animation: floatIn 1.5s ease-out;
+      position: relative;
     }
 
     .vip-card h3 {
@@ -117,9 +118,29 @@
       background: #c80000;
     }
 
+    .vip-card img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      border: 2px solid #c80000;
+    }
+
     @keyframes floatIn {
       0% { transform: translateY(20px); opacity: 0; }
       100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .scoreboard {
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-weight: bold;
     }
 
     .navbar {
@@ -183,28 +204,51 @@
         <h3>VIP1</h3>
         <p>Comisión: $1.50</p>
         <button onclick="navigate('vip1.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
         <h3>VIP2</h3>
         <p>Comisión: $7.50</p>
         <button onclick="navigate('vip2.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
         <h3>VIP3</h3>
         <p>Comisión: $15.00</p>
         <button onclick="navigate('vip3.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
         <h3>VIP4</h3>
         <p>Comisión: $30.00</p>
         <button onclick="navigate('vip4.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
       <div class="vip-card">
         <h3>VIP5</h3>
         <p>Comisión: $50.00</p>
         <button onclick="navigate('vip5.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+      </div>
+      <div class="vip-card">
+        <h3>VIP6</h3>
+        <p>Comisión: $75.00</p>
+        <button onclick="navigate('vip6.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
+      </div>
+      <div class="vip-card">
+        <h3>VIP7</h3>
+        <p>Comisión: $100.00</p>
+        <button onclick="navigate('vip7.html')">Ir</button>
+        <img src="https://github.com/user-attachments/assets/e636a448-e269-486a-9a92-19eebce6f877" alt="Imagen VIP">
       </div>
     </section>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <p>Puntajes y logros del usuario</p>
+      <p><strong>Comisiones Totales: $XXX</strong></p>
+    </div>
   </div>
 
   <!-- Navbar -->
